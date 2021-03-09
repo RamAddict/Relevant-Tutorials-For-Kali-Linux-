@@ -1,0 +1,12 @@
+#install snap
+sudo apt install snapd
+# If you cannot use sudo -i, then just prefix your commands with sudo
+sudo -i 
+# Close your browser by hand. Following command will ensure no Opera processes are running in the background
+killall opera
+cd /usr/lib/opera
+# Some software automatically loads any .so/.dll file that is present. Not sure for Opera, but just in case
+mv libffmpeg.so libffmpeg.so_original
+snap install chromium-ffmpeg
+# Please note that chromium-ffmpeg-95241 path might differ. Just pickup one with highest number. 
+ln -sf /snap/chromium-ffmpeg/current/chromium-ffmpeg-95241/chromium-ffmpeg/libffmpeg.so libffmpeg.so

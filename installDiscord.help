@@ -1,0 +1,5 @@
+# Download the tar from the official page, NOT the deb
+# When you run ./Discord you will get an error wihch looks like this [479026:0502/185909.649080:FATAL:setuid_sandbox_host.cc(157)] The SUID sandbox helper binary was found
+# Run these commands and it should work
+sudo chown root:root chrome-sandbox
+sudo chmod 4755 chrome-sandbox
