@@ -1,0 +1,9 @@
+# To change system browser, run this
+sudo update-alternatives --config x-www-browser
+
+
+# To force discord to use a browser, run this. I used opera.desktop
+xdg-mime default chromium.desktop x-scheme-handler/http
+xdg-mime default chromium.desktop scheme-handler/http
+xdg-mime default chromium.desktop x-scheme-handler/https
+xdg-mime default chromium.desktop scheme-handler/https
